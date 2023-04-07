@@ -1,0 +1,601 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/********** BODY **********/
+body{
+    overflow: hidden;
+    overflow-y: auto;
+    /* font-size: 16px; */
+    /* font-weight: 600; */
+    font-family: 'Roboto Slab', serif;
+    color: #666;
+    /* line-height: 1.5; */
+}
+/********** END OF BODY **********/
+
+/********** ROOT **********/
+:root{
+    --color-prim: #ff5733 ;
+    --color-sec: #ffffff ;
+    --hover-color-prim:#ff5733 ;
+    --hover-color-sec:#ffffff ;
+
+    --border-prim: 1px solid var(--color-prim);
+    --border-sec: 1px solid var(--color-sec);    
+}
+.padding-ud{
+    padding: 20px 0px;
+}
+.padding-lr{
+    padding: 20px 0px;
+}
+.margin-ud{
+    margin: 20px 0px;
+}
+.margin-lr{
+    margin: 20px 0px;
+}
+/* Header tag  */
+h1, h2, h3, h4, h5, h6{
+    color:#595959;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+/* Paragraph tag */
+p{
+    font-family: 'Roboto', sans-serif;
+    
+}
+/********** END OF ROOT **********/
+
+/********** DEFAULT BTN **********/
+.mybtn{
+    width: 250px;
+    padding: 6px 15px;
+    color: var(--color-sec);
+    background-color: var(--color-prim);
+    border: var(--border-prim);
+    border-radius: 6px ;
+    text-align: center;    
+}
+.mybtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+} 
+.mybtn span:after {
+    content: '\00BB';
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    opacity: 0;
+    font-size: 30px;
+    color: #192a54;
+    transition: 0.5s;
+}  
+.mybtn:hover span {
+    padding-right: 20px;
+}  
+.mybtn:hover span:after {
+    opacity: 0.9;
+   right: -10px;
+
+}
+/********** END OF DEFAULT BTN **********/
+/* span color blue */
+.blue{
+    color: #2ea3f2;
+}
+/********** SCROLL TOP **********/
+.scroll{
+    display: inline-block;
+    background-color: #ff5733;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: .5px solid #ff6b4b;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+.scroll::after {
+    content: "⌃";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(0%,20%);
+    font-size: 3em;
+    line-height: 50px;
+    color: #192a54;
+}
+.scroll.show {
+    opacity: 1;
+    visibility: visible;
+}
+.scroll:hover {
+    cursor: pointer;
+    background-color: #ff6b4b;
+}
+/********** END OF SCROLL TOP **********/
+
+/********** HEADER **********/
+.hm-navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+.header{
+    width: 100%;
+    height: 100%;
+}
+.navbar-inner{
+    width: 100%;
+    height: 100%;
+}
+.navbar-inner .navbar-brand img{
+    width: 70px;
+    transition: width 500ms ease-in-out; 
+}
+.navbar-inner .navbar-scroll img{
+    width: 50px;
+    transition: width 500ms ease-in-out; 
+}
+.navbar-inner .my-bg{
+    background-color: var(--color-prim);
+}
+.navbar-inner .navbar .navbar-brand{
+    color: var(--color-sec);
+}
+.navbar-inner .navbar .nav-link{
+    color: var(--color-sec);
+    position: relative;
+}
+/* .navbar-inner .navbar .nav-link::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #192a54;
+} */
+.navbar-inner .navbar .nav-link:hover{
+    color: #192a54;
+}
+/********** END OF HEADER **********/
+
+/********** DISPLAY **********/
+.display{
+    width: 100%;
+    height: 600px;
+    background: url("../imgs/home-page-imgs/bgc.jpg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    padding-top: 40px;
+}
+.display-inner{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translate(0%, 15%);
+    text-transform: capitalize;
+} 
+.display-inner .d-text{
+    color: black;
+}
+.display-inner .d-text h1{
+    font-size: 3.7em;
+    padding: 10px 0px;
+}
+.display-inner .d-text p{
+    font-size: 20px;
+    padding: 10px 0px;
+    font-family: 'Roboto Slab', serif;
+
+}
+.display-inner .d-text button{
+    padding: 12px 50px;
+    border: 1px solid var(--color-prim);
+    border-radius: 5px;
+}
+/********** END OF DISPLAY **********/
+
+/********** INFO **********/
+.info{
+    width: 100%;
+    height: 100%;  
+    padding: 30px 0px;
+}
+.info .info-head h1{
+    text-align: center;
+    font-size: 40px;
+
+}
+.info-inner{
+    width: 100%;
+    height: 100%;
+}
+.info-inner .col-info{
+    width: 100%;
+    height: 100%;
+    display: block; 
+    text-align: center;
+    border: 1px solid #eceaea;
+}
+.col-info{
+    background-color: var(--color-sec);
+    color: black;
+    transition: all .7ms linear;
+    position: relative;
+}
+.col-info .info-img{
+    padding: 20px 0px;
+}
+.col-info .fa-color{
+    color: var(--color-prim);
+    transition: all .37ms linear;
+}
+.col-info .info-text{
+    width: 100%;
+    height: 60%;
+    padding: 10px 4px;
+}
+.col-info .info-text button{
+    margin: 10px 0px;
+    border: 1px solid white;
+}
+
+/* info overlay */
+.info-overlay{
+    width: 100%;
+    height: 100%;
+    /* background-color: #192a54;
+    color: var(--color-sec); */
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+}
+.info-overlay .overlay-head{
+    width: 100%;
+    height: 100%;
+    background-color: #192a54;
+    color: var(--color-sec);
+    position: absolute;
+    top: -100%;
+    padding: .45rem;
+    transition: all .5s ease-in-out;
+}
+.info-overlay .overlay-head h2{
+    color:var(--color-prim);
+}
+.info-overlay .overlay-btn{
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    transition: all .3s ease-in-out;
+}
+.info-overlay .overlay-btn .mybtn{
+    width:100%;
+     border-radius: 0px;
+}
+.info-overlay:hover h2{
+    transition: all .02s ease-in-out;
+}
+.info-overlay:hover p{
+    transition: all .02s ease-in-out;
+}
+.col-info:hover .info-overlay{
+    opacity: 1;
+}
+.col-info:hover .overlay-head{
+    top: 0%;
+}
+.col-info:hover .overlay-btn{
+    bottom: 0%;
+}
+
+/********** END OF INFO **********/
+
+/********** BANNER **********/
+.banner{
+    width: 100%;
+    background-color:#192a54;
+}
+.banner-inner{
+    width: 100%;
+    padding: 70px 0px;
+}
+.bcol-inner{
+    width: 100%;
+    height: 100%;
+    color: var(--color-sec);
+    text-align: center ;
+}
+.bcol-heading{
+    width: 100%;
+}
+.bcol-heading h2{
+     color: var(--color-sec);}
+.b-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-btn button{
+    width: 300px;
+    padding: 15px 10px;
+    font-size: large;
+}
+/********** END OF BANNER  **********/
+
+/********** STORY **********/
+.story{
+    width: 100%;
+    background: url("../imgs/sbgc.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.story-inner{
+    width: 100%;
+    padding: 40px 0px;
+}
+.story-inner .story-title{
+    text-align: center;
+}
+.story-inner .s-col{
+    width: 100%;
+    height: 100%;
+}
+.s-img{
+    width: 100%;
+    text-align: center;
+}
+.s-img img{
+    width: 85%;
+}
+.s-text p{
+   font-size: 20px;
+   padding: 20px 0px;
+}
+.s-col button{
+    width: 260px;
+    padding: 12px 0px;
+    font-size: 17px;}
+
+/********** END OF STORY **********/
+
+/********** ARTICLES **********/
+.article{
+    width: 100%;
+}
+.article-inner{
+    width: 100%;
+}
+.article-title{
+    text-align: center;
+}
+.article-title h1{
+    font-size: 40px;
+}
+.a-col{
+    width: 100%;
+}
+.a-col .a-img{
+    width: 100%;
+}
+.a-img img{
+    width: 100%;
+}
+.a-col .a-text{
+    padding: 10px;
+}
+/********** END OF ARTICLES **********/
+
+/********** COMPANY **********/
+.company{
+    width: 100%;
+    background: url("../imgs/comp.jpg") no-repeat;
+    background-size: cover;
+}
+.company-inner{
+    width: 100%;
+    padding: 40px 0px;
+}
+.company-inner .comp-col{
+   text-align: center;
+   padding: 30px 0px;
+}
+.comp-col .c-text{
+    padding: 30px 0px;
+}
+.comp-col .c-text h1{
+    padding: 10px 0px;
+}
+.comp-col .c-text p{
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.comp-col button{
+    width: 280px;
+    font-size: 18px;
+    padding: 12px 0px;
+    border-radius: 3px;
+}
+/********** END OF COMPANY **********/
+
+/********** FOOTER **********/
+.footer{
+    width: 100%;
+    background-color: #192a54;
+    padding-top: 30px ;
+}
+.footer-inner{
+    width: 100%;
+}
+.f-col{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+}
+.footer a{
+    text-decoration: none;
+}
+.f-col .f-img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.f-img img {
+    width: 20%;
+    height: 100%;
+}
+.f-text p{
+    color: var(--color-prim);
+    padding: 5px 0px;
+    margin: 0px;
+    margin-top: 20px;
+}
+.f-text a{
+    color: white;
+}
+.f-col .f-link{
+    width: 100%;
+}
+.f-link h5{
+    color: var(--color-sec);
+    padding: 0px 10px;
+}
+.f-link .flink-a{
+    color: #fff;
+    padding: 5px 0px;
+}
+.f-link li::marker{
+    color: #ff5733;
+    font-size: 1.2rem;
+}
+.f-loc{
+    width: 100%;
+    margin-top: 30px;  
+}
+.f-loc .floc-a{
+    color: var(--color-sec);
+}
+.f-loc .floc-a::after{
+    content: "→";
+    padding: 0px 5px;
+    font-size: 20px;   
+}
+
+.f-col .f-head{
+    width: 100%;    
+    padding-bottom: 20px;
+}
+.f-head h5{
+    color: var(--color-sec);
+}
+.f-form input{
+    width: 100%;
+    margin: 8px 0px;
+    padding: 10px 10px;
+    text-align: left;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+.f-col button{
+    width: 100%;
+}
+.footer-inner .f-cr{
+    text-align: center;
+}
+.f-cr h6{
+    color: var(--color-sec);
+}
+.f-cr span a{
+    color: #2ea3f2 ;
+    padding: 0px 5px;
+    transition: all .33s ease-out;
+}  
+.f-cr span a:hover{
+    color: #ff5733;
+    text-decoration: underline;
+}
+.f-cr .bl{
+    border-left: 2px solid var(--color-sec) ;
+    padding: 0px 10px ;
+}
+.footer .fs-social{
+    width: 100%;
+    height: 100%;
+    background-color: #ff5733
+}
+.fs-social .fs-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.fs-inner ul{
+    display: inline-block;
+    margin: 5px 0px;
+}
+.fs-inner li{
+    display: inline-block;
+    margin: 0px 4px;}
+.fs-inner a{
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-radius: 40%;
+    color: var(--color-sec);
+    transition: all .3s linear;
+}
+.fs-inner a:hover{
+   color:#192a54;
+   /* transform:scale(1.3) ; */
+}
+.fs-inner a .fab{
+    transition: all .9ms linear;
+    transform:scale(0.7) ;
+
+}
+.fs-inner a:hover .fab{
+    transform:scale(1) ;
+ }
+.fs-inner li{
+    position: relative;
+}
+.fs-inner .poptext {
+    width: 180px;
+    visibility: hidden;
+    color: var(--color-sec);
+    padding: 5px 2px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 100%;
+    left: -160%;
+    text-align: center;
+    transition: all .2ms linear;
+    color: var(--color-prim);
+}
+.fs-inner a:hover .poptext{
+    visibility: visible;
+}  
+/********** END OF FOOTER **********/
+

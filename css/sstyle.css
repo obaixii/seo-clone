@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-weight: 500;
+}
+/********** BODY **********/
+body{
+    overflow: hidden;
+    overflow-y: auto;
+    /* font-size: 16px; */
+    /* font-weight: 600; */
+    font-family: 'Roboto Slab', serif;
+    color: #666;
+    /* line-height: 1.5; */
+}
+/********** END OF BODY **********/
+/********** DISPLAYxSEO **********/
+.display-seo{
+    width: 100%;
+    background: url("../imgs/seo-page-imgs/seo.2.jpg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    padding: 80px 0px;
+}
+.display-seo-inner{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 90px;
+    text-align: center;
+    transform: translate(0%, 15%);
+    text-transform: capitalize;
+} 
+.display-seo-inner .display-seo-text{
+    color: black;
+}
+.display-seo-inner .display-seo-text h2{
+    font-size: 3.7em;
+    padding: 10px 0px;
+}
+.display-seo-inner .display-seo-text p{
+    padding: 10px 0px;
+    font-family: 'Roboto Slab', serif;
+}
+.display-seo-inner .display-seo-text button{
+    padding: 12px 50px;
+    border: 1px solid var(--color-prim);
+    border-radius: 5px;
+}
+/********** END OF DISPLAYxSEO **********/
+
+
+/********** PRO  **********/
+.pro{
+    width: 100%;
+    padding: 5rem 0rem;
+}
+.pro .pro-inner{
+    width: 100%;
+}
+.pro-inner .pro-header{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+}
+.pro-header h2{
+    font-size: 40px;
+    padding: 10px;
+}
+.pro-header p{
+    padding: 10px 0px;
+    font-size: 20px;
+}
+.pro-header .blue{
+    color: #2ea3f2;
+}
+.pro-num{
+    width: 100%;
+    height: 100%;
+}
+.pro-num .pro-col{
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+    border: 5px solid transparent ;
+    border-radius: 10px;
+    transition: all .5s linear ;
+}
+.pro-col:hover{
+    color: #fff;
+    background-color: #192a54;
+}
+.pro-num .pro-col:hover h3 {
+   color: var(--color-prim);
+   transition: .5s linear;
+}
+.pro-num .pro-col:hover p {
+    color: var(--color-sec);
+    transition: .5s linear;
+}
+.pro-col .pro-img{
+    width: 100%;
+    padding: 20px 0px;
+}
+.pro-img img{
+    width: 35%;
+}
+.pro-col .pro-text{
+    width: 100%;
+    padding: 20px 0px;
+}
+.pro-col .pro-text h3{
+    color: #2ea3f2;
+}
+.pro-col .pro-text p{
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+/********** END OF PRO **********/
+
+
+/********** REVIEW **********/
+.s-review{
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px;
+    background-color: #192a54;
+}
+.s-review .s-review-inner{
+    width: 100%;
+}
+.s-review-inner .review-text{
+    width: 100%;
+    padding: 0px 30px ;
+    text-align: center;
+
+}
+.review-text p{
+    color: var(--color-sec);
+    font-size: 25px;
+}
+/********** END OF REVIEW  **********/
+
+
+/********** PRICING **********/
+.s-pricing{
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px;
+    background-color: rgba(247,247,247,0.5);;
+}
+.s-pricing .s-pricing-inner{
+    width: 100%;
+}
+.s-pricing-inner .price-title{
+    padding: 20px 0px;
+    text-align: center;
+}
+.s-pricing-inner .price-title h2{
+    font-size: 45px; 
+}
+.s-pricing-inner .price-title p{
+    font-size: 25px; 
+}
+.s-pricing-inner .price-cards{
+    width: 100%;  
+}
+.price-cards .price-col{
+    width: 100%;
+    background-color: var(--color-sec);
+}
+.price-col .mycard{
+    width: 100%;
+    text-align: center;
+}
+.mycard .card-img{
+    width: 100%;
+    padding: 15px 0px 
+}
+.mycard .card-img img{
+    width: 35%;
+}
+.mycard .card-title{
+    width: 100%;
+}
+.mycard .card-title h3{    
+    padding: 10px 0px;
+}
+.mycard .card-title h6{    
+    padding: 5px 0px;
+}
+.mycard .card-text{
+    width: 100%;
+    padding: 5px 20px;
+}
+.mycard .card-text p a{
+   text-decoration: none;
+}
+.card-text a span:hover{
+    color: var(--hover-color-prim);
+    text-decoration: underline;
+ }
+.mycard .card-price{
+    width: 100%;
+}
+
+.card-price .price-tag{
+    padding: 5px 0px;
+}
+.mycard .card-btn button{
+    width: 100%;
+}
+/********** END OF PRICING **********/
+
+
+/********** WORK **********/
+.s-work{
+    width: 100%;
+    padding: 80px 0px;
+}
+.s-work .s-work-inner{
+    width: 100%;
+}
+.s-work-title{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.s-work-title h2{
+    font-size: 40px;
+    padding: 10px 0px;
+    position: relative;
+}
+.s-work-title p{
+    font-size: 20px;
+}
+.s-work-inner .myaccordion{
+    padding: 40px 0px;
+}
+
+/********** END OF WORK **********/
+
+
+/********** ARTICLESxSEO **********/
+.s-article{
+    width: 100%;
+    padding: 80px 0px;
+}
+.s-article .s-article-inner{
+    width: 100%;
+}
+.s-article-inner .s-article-title{
+    text-align: center;
+    padding: 10px 0px;
+}
+.s-article-inner .s-article-col{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+}
+.s-article-col .s-article-img{
+    width: 100%;
+}
+.s-article-col .s-article-img img{
+    width: 100%;
+}
+.s-article-col .s-article-text{
+    width: 100%;
+    padding: 25px 0px;
+}
+.s-article-text h5{
+    padding: 5px 0px;
+    font-weight: 500;
+}
+.s-article-text h5 a{
+    color: #2ea3f2;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.s-article-text h5 a:hover{
+    color: var(--hover-color-prim);
+
+}
+/********** END OF ARTICLESxSEO  **********/
+
+
+/********** SEOxFORM **********/
+.s-form{
+    background: url("../imgs/seo-page-imgs/form\ seo.webp") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px;
+}
+.s-form .s-form-inner{
+    width: 100%;
+    height: 100%;
+}
+.s-form-inner .s-form-title{
+    width: 100%;
+    text-align: center;
+}
+.s-form-inner .s-form-title p{
+   font-size: 20px;
+   padding-top:30px ;
+}
+.s-form-inner .s-form-contact{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-sec);
+    box-shadow: 0px 2px 18px -5px #565d5e;
+}
+/********** END OF SEOxFORM **********/
